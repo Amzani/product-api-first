@@ -39,12 +39,14 @@ The existing core Product API privides this affordances:
 
 ## Step1. Let's draw!
 
-Task: In this step we draw out a state diagrams for the proposed API. Each box in the diagram represents a possible representation. You can use arrows to indicate transitions from one box to the next.
+Task: In this step we extend an existing state diagrams for the proposed API. Each box in the diagram represents a possible representation. You can use arrows to indicate transitions from one box to the next.
 
-You can use [draw.io](draw.io)
+
+
+You can use [draw.io](draw.io) to extend 
 You can extend the existing diagram below, hosted [here](./product_draw.xml): 
 
-![Product API](LINK)
+![Product API](./product_draw.png)
 
 This state machine diagram will help you to identify the main ressources and their relations.
 
