@@ -39,7 +39,7 @@ The existing core Product API privides this affordances:
 
 ## Step1. Let's describe what actions our API affords
 
-List the new API affodrances
+*TASK*: List the new API affodrances
 
 
 
@@ -47,7 +47,7 @@ List the new API affodrances
 
 > The state machine diagram will help you to identify the main REST ressources and their relations.
 
-Task: In this step we extend an existing state diagrams for the proposed API. Each box in the diagram represents a possible representation. You can use arrows to indicate transitions from one box to the next.
+*TASK*: In this step we extend an existing state diagrams for the proposed API. Each box in the diagram represents a possible representation. You can use arrows to indicate transitions from one box to the next.
 
 ![Product API](./product_draw.png)
 
@@ -58,16 +58,15 @@ Task: In this step we extend an existing state diagrams for the proposed API. Ea
 
 ## Step3. Formalize the design in the [Open API Specification](http://swagger.io/specification/)
 
-Task: Extend the existing swagger.yaml
-
-
 > The OAS file can be edited in whatever tool you like *BUT NOT GENERATED FROM YOUR CODE*, the most important thing is that the aprouved one (the contract) *MUST* be in Apiary.
+
+*TASK*: Extend the existing swagger.yaml
 
 
 
 ## Step4. Verify the design using Apiary Documentation and Apiary Mock Service
 
-Task: Try the Apiary mock service
+*TASK*: Try the Apiary mock service
 
 
 
@@ -86,14 +85,10 @@ If your API looks like this remote control then your design is affordant!
 
 ## Step6. Sync your API contract
 
-> Every API description MUST be published in adidas API design platform (apiary.io) and SHOULD be stored in version control system (Bitbucket, GitHub) in the same repository as the
- API implementation.
+> Every API description MUST be published in adidas API design platform (apiary.io) and SHOULD be stored in version control system (Bitbucket, GitHub) in the same repository as the API implementation.
 
 - Host your API in github
 - Setup up Github/apiary Sync
-
-//Show it
-
 
 
 ## Step7. Setup API contract testing
