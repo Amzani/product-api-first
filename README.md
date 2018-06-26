@@ -42,7 +42,7 @@ The existing core Product API privides this affordances:
 Task: In this step we draw out a state diagrams for the proposed API. Each box in the diagram represents a possible representation. You can use arrows to indicate transitions from one box to the next.
 
 You can use [draw.io](draw.io)
-You can extend the existing diagram below, hosted [here](LINK): 
+You can extend the existing diagram below, hosted [here](): 
 
 ![Product API](LINK)
 
@@ -80,10 +80,13 @@ If your API looks like this remote control then your design is affordant!
 
 ## Step6. Sync your API contract
 
-> Every API description MUST be published in adidas API design platform (apiary.io) and SHOULD be stored in version control system (Bitbucket, GitHub) in the same repository as the API implementation.
+> Every API description MUST be published in adidas API design platform (apiary.io) and SHOULD be stored in version control system (Bitbucket, GitHub) in the same repository as the
+ API implementation.
 
 - Host your API in github
 - Setup up Github/apiary Sync
+
+//Show it
 
 
 ## Step7. Setup API contract testing
@@ -94,6 +97,9 @@ Descibe steps:
 - 
 
 - Try dredd docker image.
+
+
+//Show it
 
 
 

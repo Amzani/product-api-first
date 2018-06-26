@@ -1,0 +1,91 @@
+{
+	"info": {
+		"name": "Hackathon-ZAZ",
+		"_postman_id": "28ade43a-bab0-f6e2-d0fd-0f6e55c29327",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "Ultra booooost",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "I can boooost really booost",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "images",
+							"value": "http://www.photo.com/a.jpg, http://www.photo.com/b.jpg, ",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "tags",
+							"value": "boost, must have, super",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "category",
+							"value": "boost",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"products"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
