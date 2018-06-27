@@ -19,8 +19,8 @@ info:
     - Add a product review
     - Create a user
     - Retrieve user profile
-    - Retrieve the user wishlist (TODO)
-    - Add a product into the wishlist (TODO)
+    - Retrieve the user wishlist
+    - Add a product into the wishlist
     
 
 produces:
@@ -655,15 +655,7 @@ definitions:
         history:
           - $ref: '#/definitions/halReviewStatsItem/example'
           
-  # Review stats
-  reviewStats:
-    type: object
-    properties:
-      reviewCount:
-        type: number
-      averageRating:
-        type: number
-        
+
   # HAL Wrapper
   halReviewStatsItem:
     type: object

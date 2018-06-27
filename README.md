@@ -39,7 +39,7 @@ The existing core Product API privides this affordances:
 
 ## Step1. Let's describe what actions our API affords
 
-*TASK*: List the new API affodrances
+**TASK**: List the new API affodrances
 
 
 
@@ -47,7 +47,7 @@ The existing core Product API privides this affordances:
 
 > The state machine diagram will help you to identify the main REST ressources and their relations.
 
-*TASK*: In this step we extend an existing state diagrams for the proposed API. Each box in the diagram represents a possible representation. You can use arrows to indicate transitions from one box to the next.
+**TASK**: In this step we extend an existing state diagrams for the proposed API. Each box in the diagram represents a possible representation. You can use arrows to indicate transitions from one box to the next.
 
 ![Product API](./product_draw.png)
 
@@ -60,13 +60,13 @@ The existing core Product API privides this affordances:
 
 > The OAS file can be edited in whatever tool you like *BUT NOT GENERATED FROM YOUR CODE*, the most important thing is that the aprouved one (the contract) *MUST* be in Apiary.
 
-*TASK*: Extend the existing swagger.yaml
+**TASK**: Extend the existing swagger.yaml
 
 
 
 ## Step4. Verify the design using Apiary Documentation and Apiary Mock Service
 
-*TASK*: Try the Apiary mock service
+**TASK**: Try the Apiary mock service
 
 
 
@@ -74,7 +74,7 @@ The existing core Product API privides this affordances:
 
 At this stage you:
 
-- Ask feedback from your API users by sending to them the documentation link.
+- Ask feedback from your API users by sending them the documentation link.
 - Ask feedback from your product owner
 
 If your API looks like this remote control then your design is affordant!
@@ -94,7 +94,6 @@ If your API looks like this remote control then your design is affordant!
 ## Step7. Setup API contract testing
 
 
-Descibe steps:
 - Git merge with implem branch...simple app with only the root endpoint.
 - 
 

@@ -19,7 +19,7 @@ RUN go build -o /go/src/github.com/Amzani/product-api-first/bin/server .
 FROM golang:1.10.3
 RUN mkdir /app
 
-COPY --from=builder /go/src/github.com/Amzani/tajine/bin/server /app/
+COPY --from=builder /go/src/github.com/Amzani/product-api-first/bin/server /app/
 
 WORKDIR /app
 EXPOSE 5000

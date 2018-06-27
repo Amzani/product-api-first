@@ -105,11 +105,25 @@ func main() {
 	}))
 
 	router.OPTIONS("/", preflight)
-	router.GET("/", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "pong",
-		})
-	})
+	// router.GET("/", func(c *gin.Context) {
+	// 	c.Header("Content-Type", "application/hal+json")
+	// 	c.JSON(http.StatusOK, gin.H{
+	// 		"_links": gin.H{
+	// 			"self": gin.H{
+	// 				"href": "/",
+	// 			},
+	// 			"products": gin.H{
+	// 				"href": "/products",
+	// 			},
+	// 			"reviews": gin.H{
+	// 				"href": "/reviews",
+	// 			},
+	// 			"users": gin.H{
+	// 				"href": "/users",
+	// 			},
+	// 		},
+	// 	})
+	// })
 
 	product := router.Group("/products")
 	{
@@ -118,7 +132,6 @@ func main() {
 
 		//Retrieve products
 		product.POST("/", ProductCreateHandler)
-		//TODO
 	}
 
 	router.Run(":5000")

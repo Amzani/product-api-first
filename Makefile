@@ -1,29 +1,14 @@
-ENGINE=docker
-
-.PHONY: build-docker
-build-docker:
-	docker run -it --rm -v $(shell pwd):/app -p 8000:8000 amzani/docker-gatsbyjs build
-
-.PHONY: dev-docker
-dev-docker:
-	@@echo "Deleting cache"
-	rm -r ./.cache/* || true
-	@@echo "Run in docker"
-	docker run -it --rm -v $(shell pwd):/app -p 8000:8000 amzani/docker-gatsbyjs develop
+APP=product-api
 
 .PHONY: build
 build:
-	rm -fr ./public/*
-	ACTIVE_ENV=dev gatsby build
+	docker build . -t $(APP)
 
-.PHONY: dev
-dev:
-	@@echo "Deleting cache"
-	rm -r ./.cache/* || true
-	gatsby develop
 
-.PHONY: serve-dev
-serve-dev: build
-	@@echo "Running in docker with dev server"
-	docker-compose down --rmi local
-	docker-compose up
+.PHONY: run
+run:
+	docker run -it --rm --name product-api -p 5000:5000  product-api
+
+.PHONY: test-contract
+test-contract:
+	docker

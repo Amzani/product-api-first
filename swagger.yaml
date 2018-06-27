@@ -594,43 +594,6 @@ definitions:
       instance: '/users/{user_id}'
 
 
-#
-  # Review Resource
-  #
-  halWishlist:
-    type: object
-    properties:
-      wishlistCount:
-        type: number
-    allOf:
-      - $ref: '#/definitions/halResource'
-    example:
-      _links:
-        self:
-          href: /users/{user_id}/wishlist
-          templated: true
-
-        create:
-          href: /users/{user_id}/wishlist
-          templated: true
-
-        next:
-          href: /users/{user_id}/wishlist?offset=5&limit=5
-          templated: true
-
-        first:
-          href: /users/{user_id}/wishlist?offset=0&limit=5
-          templated: true
-
-        last:
-          href: /users/{user_id}/wishlist?offset=40&limit=5
-          templated: true
-
-      _embedded:
-        wishlistCount: 122
-        wishlist:
-          - $ref: '#/definitions/halWishProduct/example'
-
 
   #
   # -- DO NOT EDIT BEYOND THIS POINT --
