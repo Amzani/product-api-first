@@ -93,15 +93,9 @@ If your API looks like this remote control then your design is affordant!
 
 ## Step7. Setup API contract testing
 
+>Every API description (contract) using HTTP(S) protocol MUST be tested against its API implementation. The tests MUST be executed using the Dredd testing framework. The Dredd MUST report the test results to Apiary. In addition to local runs, the tests SHOULD be an integral part the API implementation's CI/CD pipeline. The CI/CD pipeline SHOULD be configured to run the test whenever there is a change to either API description (contract) or its implementation.
 
-- Git merge with implem branch...simple app with only the root endpoint.
-- 
-
-- Try dredd docker image.
-
-
-//Show it
-
+- Task: Install and run [dredd](https://github.com/apiaryio/dredd)
 
 
 ## Some example of good designed APIs
