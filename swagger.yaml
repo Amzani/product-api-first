@@ -21,6 +21,8 @@ info:
     - Retrieve user profile
     - Retrieve the user wishlist (TODO)
     - Add a product into the wishlist (TODO)
+    - Delete a specific product from mt wishlist (TODO)
+    - Clear the wishlist (TODO)
     
 
 produces:
