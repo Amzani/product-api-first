@@ -6,9 +6,9 @@ info:
       name: "Samir AMZANI / Ignacio Alzorriz"
       email: "samir.amzani@adidas.com"
   description: |
-    A Simple adidas product API for the On-Boarding hackathon. 
+    A Simple adidas product API for the On-Boarding hackathon.
     [On-Boarding trainings](https://tools.adidas-group.com/confluence/display/DSBP/Engineers+On-Boarding+trainings) hackathon
-    
+
     ## Affordances
     This API affords the following actions:
     - Retrieve the list of products
@@ -21,7 +21,7 @@ info:
     - Retrieve user profile
     - Retrieve the user wishlist
     - Add a product into the wishlist
-    
+
 
 produces:
   - application/hal+json      # Representation message format
@@ -35,9 +35,9 @@ securityDefinitions:
     type: oauth2
     authorizationUrl: 'http://example/oauth'
     description: |
-    
+
       There are three available roles in the application:
-      
+
         - Anonymous -> can log in, log out, see products, see general ratings from a product.
         - User -> all from Anonymous + following scopes: write:wishlist, read:reviews, write:reviews.
         - Admin -> all from Anonymous + following scopes: write:products, read:reviews, read:reviews:stats, read:users, write:users.
@@ -64,7 +64,7 @@ paths:
           description: The root of the API
           schema:
             $ref: '#/definitions/halRoot'
-          
+
 
   /products:
     x-summary: List of Products
@@ -93,7 +93,7 @@ paths:
           type: array
           items:
             type: string
-            enum: 
+            enum:
             - available
             - pending
             - sold
@@ -184,11 +184,11 @@ paths:
       security:
         - oauth2:
           - 'write:products'
-            
+
   /products/{product_id}/reviews:
-  
+
     x-summary: List of Product Reviews
-    
+
     parameters:
       - name: product_id
         in: path
@@ -242,11 +242,11 @@ paths:
       security:
         - oauth2:
           - 'write:reviews'
-          
+
   /products/{product_id}/reviews-stats:
-  
+
     x-summary: List of Product Reviews Stats
-    
+
     parameters:
       - name: product_id
         in: path
@@ -288,9 +288,9 @@ paths:
       security:
         - oauth2:
           - 'read:reviews:stats'
-      
+
   /users:
-  
+
     x-summary: Users
 
     post:
@@ -315,7 +315,7 @@ paths:
 
   /users/{user_id}:
     x-summary: User Profile
-    
+
     parameters:
       - name: user_id
         in: path
@@ -334,10 +334,10 @@ paths:
       security:
         - oauth2:
           - 'read:users'
-            
+
   /users/{user_id}/wishlist:
     x-summary: User Wishlist
-    
+
     parameters:
       - name: user_id
         in: path
@@ -345,7 +345,7 @@ paths:
         required: true
         type: string
         x-example: '32312'
-  
+
     get:
       summary: Get the User Wishlist
       responses:
@@ -356,10 +356,10 @@ paths:
       security:
         - oauth2:
           - 'read:wishlist'
-          
+
   /users/{user_id}/wishlist/{product_id}:
     x-summary: User Product Wishlist
-    
+
     parameters:
       - name: user_id
         in: path
@@ -367,14 +367,14 @@ paths:
         required: true
         type: string
         x-example: '32312'
-        
+
       - name: product_id
         in: path
         description: Id of the Product
         required: true
         type: string
         x-example: 'DB1124'
-    
+
     post:
       summary: Add a Product To The Wishlist
       consumes:
@@ -497,7 +497,7 @@ definitions:
         type: string
       status:
         type: string
-        enum: 
+        enum:
         - available
         - pending
         - sold
@@ -536,8 +536,8 @@ definitions:
       detail: 'Cannot find the requested product'
       status: 404
       instance: '/products/DB1124'
-      
-      
+
+
   #
   # Review Resource
   #
@@ -618,7 +618,7 @@ definitions:
 
 
 
-        
+
 #
   # Review Stats Resource
   #
@@ -654,7 +654,7 @@ definitions:
         averageRating: 4.3
         history:
           - $ref: '#/definitions/halReviewStatsItem/example'
-          
+
 
   # HAL Wrapper
   halReviewStatsItem:
