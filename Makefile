@@ -8,7 +8,3 @@ build:
 .PHONY: run
 run:
 	docker run -it --rm --name product-api -p 5000:5000  product-api
-
-.PHONY: test-contract
-test-contract:
-	docker
