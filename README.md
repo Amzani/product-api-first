@@ -7,6 +7,28 @@
 - [Draw.io](https://www.draw.io/)
 - Git
 - Code editor
+- Docker (optional)
+
+
+## Setup
+
+1. Fork this repo and pull in your local machine
+
+2. Edit and check the swagger file `swagger.yaml`
+
+2. Build the api image
+
+This is only needed if you want to try the implementation of the designed API + API contract testing
+
+```
+make build
+```
+
+3. Run the API
+
+```
+make run
+```
 
 
 ## Design challenge
