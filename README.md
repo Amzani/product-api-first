@@ -16,7 +16,7 @@
 
 2. Edit and check the swagger file `swagger.yaml`
 
-2. Build the api image
+3. Build the api image
 
 This is only needed if you want to try the implementation of the designed API + API contract testing
 
@@ -24,7 +24,7 @@ This is only needed if you want to try the implementation of the designed API + 
 make build
 ```
 
-3. Run the API
+4. Run the API
 
 ```
 make run
@@ -33,7 +33,7 @@ make run
 
 ## Design challenge
 
-As a new assignement you are asked to add a wishlist feature to our adidas ecom (website, native apps). 
+As a new assignement you are asked to add a wishlist feature to our adidas ecom (website, native apps).
 
 You've decided wisly to think [API First](https://adidas-group.gitbooks.io/api-guidelines/content/core-principles/api-first.html) and [API Design First](https://adidas-group.gitbooks.io/api-guidelines/content/core-principles/design-maturity.html).
 
@@ -47,7 +47,7 @@ You've assigned 4 user stories:
 
 ## Existing affordances (actions)
 
-The existing core Product API privides this affordances:  
+The existing core Product API privides this affordances:
 
 - Retrieve the list of products
 - Retrieve a single product

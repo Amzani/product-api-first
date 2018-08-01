@@ -6,9 +6,9 @@ info:
       name: "Samir AMZANI / Ignacio Alzorriz"
       email: "samir.amzani@adidas.com"
   description: |
-    A Simple adidas product API for the On-Boarding hackathon. 
+    A Simple adidas product API for the On-Boarding hackathon.
     [On-Boarding trainings](https://tools.adidas-group.com/confluence/display/DSBP/Engineers+On-Boarding+trainings) hackathon
-    
+
     ## Affordances
     This API affords the following actions:
     - Retrieve the list of products
@@ -23,7 +23,7 @@ info:
     - Add a product into the wishlist (TODO)
     - Delete a specific product from mt wishlist (TODO)
     - Clear the wishlist (TODO)
-    
+
 
 produces:
   - application/hal+json      # Representation message format
@@ -37,9 +37,9 @@ securityDefinitions:
     type: oauth2
     authorizationUrl: 'http://example/oauth'
     description: |
-    
+
       There are three available roles in the application:
-      
+
         - Anonymous -> can log in, log out, see products, see general ratings from a product.
         - User -> all from Anonymous + following scopes: write:wishlist, read:reviews, write:reviews.
         - Admin -> all from Anonymous + following scopes: write:products, read:reviews, read:reviews:stats, read:users, write:users.
@@ -66,7 +66,7 @@ paths:
           description: The root of the API
           schema:
             $ref: '#/definitions/halRoot'
-          
+
 
   /products:
     x-summary: List of Products
@@ -186,11 +186,11 @@ paths:
       security:
         - oauth2:
           - 'write:products'
-            
+
   /products/{product_id}/reviews:
-  
+
     x-summary: List of Product Reviews
-    
+
     parameters:
       - name: product_id
         in: path
@@ -244,10 +244,10 @@ paths:
       security:
         - oauth2:
           - 'write:reviews'
-          
-      
+
+
   /users:
-  
+
     x-summary: Users
 
     post:
@@ -272,7 +272,7 @@ paths:
 
   /users/{user_id}:
     x-summary: User Profile
-    
+
     parameters:
       - name: user_id
         in: path
@@ -291,7 +291,7 @@ paths:
       security:
         - oauth2:
           - 'read:users'
-            
+
 definitions:
   #
   # API Root
@@ -390,7 +390,7 @@ definitions:
         type: string
       status:
         type: string
-        enum: 
+        enum:
         - available
         - pending
         - sold
@@ -429,8 +429,8 @@ definitions:
       detail: 'Cannot find the requested product'
       status: 404
       instance: '/products/DB1124'
-      
-      
+
+
   #
   # Review Resource
   #
@@ -510,7 +510,7 @@ definitions:
       createdAt: '2017-06-21T14:07:17Z'
 
 
-        
+
   # HAL Wrapper
   halReviewStatsItem:
     type: object
