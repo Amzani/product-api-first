@@ -7,7 +7,7 @@
 - [Draw.io](https://www.draw.io/)
 - Git
 - Code editor
-- Docker (optional)
+- Docker 
 
 
 ## Setup
