@@ -1,6 +1,8 @@
 # API Design Workshop
 
 
+[![Build Status](https://cloud.drone.io/api/badges/Amzani/product-api-first/status.svg)](https://cloud.drone.io/Amzani/product-api-first)
+
 ## Requirements
 
 - Read [Adidas API Guidelines](https://adidas-group.gitbooks.io/api-guidelines/content/)
@@ -120,51 +122,4 @@ If your API looks like this remote control then your design is affordant!
 >Every API description (contract) using HTTP(S) protocol MUST be tested against its API implementation. The tests MUST be executed using the Dredd testing framework. The Dredd MUST report the test results to Apiary. In addition to local runs, the tests SHOULD be an integral part the API implementation's CI/CD pipeline. The CI/CD pipeline SHOULD be configured to run the test whenever there is a change to either API description (contract) or its implementation.
 
 - **TASK**: Install and run [dredd](https://github.com/apiaryio/dredd)
-
-
-## Some example of bad designed APIs
-
-### [[Sales and Distribution] Returns Confirmation API](https://returnsconfirmation.docs.apiary.io/)
-Missing description
-Missing examples
-Missing HAL
-Exposing internal model
-Missing support contact
-
-### [ATP Notification Service](https://atpnotificationservice.docs.apiary.io/)
-Usage of acronyms, what's ATP stands for ?
-Missing description / context
-Missing HAL
-Missing support contact
-
-
-## Some example of good designed APIs
-
-Sample APIs following the guidelines are available at [adidas-group GitHub](https://github.com/adidas-group). The samples include the following:
-
-
-### [Simple API](https://github.com/adidas-group/demo-simple-api)
-Very simple API including implementation, testing, and full CI/CD lifecycle.
-
-### [Approval API](https://github.com/adidas-group/demo-approval-api)
-Real-world API with state transition, API key client app authentication, exposed via API management.
-
-### [Orders API](https://github.com/adidas-group/demo-orders-api)
-Sample API used as the template for newly created projects at Apiary.
-
-### [Inventory API](https://eainventoryapi.docs.apiary.io/)
-Real-world Adidas Inventory API (WIP)
-
-### [Appointment Service](https://github.com/adidas-group/demo-appointment-service)
-Demo API, including implementation and testing used during training.
-
-### [Complex Search Parameters](https://github.com/adidas-group/demo-complex-search)
-Sample API showcasing description of complex query parameter rules.
-
-### [CPM] Asset Trafficker https://assetmanager4.docs.apiary.io/
-
-
-
-
-
 

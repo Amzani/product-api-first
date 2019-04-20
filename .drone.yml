@@ -1,0 +1,10 @@
+kind: pipeline
+name: default
+
+steps:
+- name: build
+  image: golang:1.10.3
+  commands:
+  - curl https://glide.sh/get | sh
+  - glide update
+  - go build
