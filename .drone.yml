@@ -6,4 +6,5 @@ steps:
   image: golang:1.10.3
   commands:
   - mkdir -p /go/src/github.com/Amzani/product-api-first
-  - ls -l
+  - cp . /go/src/github.com/Amzani/product-api-first/
+  - ls /go/src/github.com/Amzani/product-api-first/
