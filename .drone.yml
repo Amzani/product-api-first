@@ -1,16 +1,9 @@
 kind: pipeline
 name: default
 
-volumes:
-- name: docker
-  host:
-    path: /var/run/docker.sock
-
 steps:
 - name: build
-  image: docker:18.09.5-git
-  volumes:
-  - name: docker
-    path: /var/run/docker.sock
+  image: golang:1.10.3
   commands:
-  - docker info
+  - mkdir -p /go/src/github.com/Amzani/product-api-first
+  - ls -l
