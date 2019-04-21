@@ -8,6 +8,7 @@ steps:
   - mkdir -p /go/src/github.com/Amzani/product-api-first
   - cp -r . /go/src/github.com/Amzani/product-api-first/
   - ls /go/src/github.com/Amzani/product-api-first/
+  - cd /go/src/github.com/Amzani/product-api-first/
   - curl https://glide.sh/get | sh
   - glide update
-  - go build -o /go/src/github.com/Amzani/product-api-first/bin/server .
+  - go build -o /go/src/github.com/Amzani/product-api-first/bin/server .  
