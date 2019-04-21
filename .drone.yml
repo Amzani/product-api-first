@@ -1,10 +1,16 @@
 kind: pipeline
 name: default
 
+volumes:
+- name: docker
+  host:
+    path: /var/run/docker.sock
+
 steps:
 - name: build
-  image: golang:1.10.3
+  image: docker:18.09.5-git
+  volumes:
+  - name: docker
+    path: /var/run/docker.sock
   commands:
-  - curl https://glide.sh/get | sh
-  - glide update
-  - go build
+  - docker info
